@@ -1,5 +1,5 @@
 import 'package:document_scanner/screens/myfiles_screen.dart';
-import 'package:document_scanner/screens/recent_screen.dart';
+import 'package:document_scanner/screens/practice_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
@@ -22,7 +22,8 @@ class _NavBarState extends State<NavBar> {
     return Scaffold(
       body: IndexedStack(index: tabIndex, children: const [
         //HomeScreen(),
-        RecentScreen(),
+        PracticeHomeScreen(),
+        //RecentScreen(),
         MyfileScreen(),
       ]),
       bottomNavigationBar: BottomAppBar(
