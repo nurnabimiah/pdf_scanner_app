@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../reusable_widget/app_headertext_widget.dart';
 import '../reusable_widget/reusable_appbar.dart';
 
+
+import 'package:flutter/material.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -10,53 +13,46 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: reusbaleAppbar(),
+      appBar: AppBar(
+        title: Text("Document Scanner"),
+        elevation: 0,
+      ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppHeaderTextWidget(
-            text: 'My Files',
+          TabBar(
+            controller: _tabController,
+            tabs: [
+              Text('Doc pdf Scanner'),
+              Text('Id card Scanner'),
+              Text('Business Card Scanner'),
+
+            ],
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.200,
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
               children: [
-                Image.asset(
-                  'images/no_data.png',
-                  height: 150,
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-                Text(
-                  'Scan the document or download ',
-                  style: TextStyle(
-                      fontSize: 15,
-                      letterSpacing: 0.4,
-                      fontWeight: FontWeight.w600),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text('it form device',
-                    style: TextStyle(
-                        fontSize: 15,
-                        letterSpacing: 0.4,
-                        fontWeight: FontWeight.w600))
+                Container(color: Colors.red), // Replace with your content for the first tab
+                Container(color: Colors.green), // Replace with your content for the second tab
+                Container(color: Colors.blue), // Replace with your content for the third tab
               ],
             ),
-          )
+          ),
         ],
       ),
     );
   }
 }
+

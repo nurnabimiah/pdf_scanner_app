@@ -29,7 +29,8 @@ class _MyfileScreenState extends State<MyfileScreen> {
                 width: 180,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
-                    color: Colors.blue.withOpacity(0.1)),
+                    color: Colors.blue.withOpacity(0.1)
+                ),
                 child: Column(
                   children: [
                     Expanded(
