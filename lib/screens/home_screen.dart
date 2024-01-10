@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../reusable_widget/app_headertext_widget.dart';
-import '../reusable_widget/reusable_appbar.dart';
 
-
-import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -40,16 +36,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
             ],
           ),
-          Expanded(
-            child: TabBarView(
-              controller: _tabController,
-              children: [
-                Container(color: Colors.red), // Replace with your content for the first tab
-                Container(color: Colors.green), // Replace with your content for the second tab
-                Container(color: Colors.blue), // Replace with your content for the third tab
-              ],
-            ),
-          ),
+
         ],
       ),
     );

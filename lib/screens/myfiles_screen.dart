@@ -73,7 +73,7 @@ class _MyfileScreenState extends State<MyfileScreen> {
                                     Icon(Icons.more_vert_outlined),
                                   ],
                                 ),
-                                Text('23/01/2023')
+                                Text('23/01/2023',style: TextStyle(color: Colors.black),)
                               ],
                             ),
                           ),
