@@ -127,116 +127,115 @@ class _NavBarState extends State<NavBar> {
               itemBar(Icons.file_copy_sharp, "Files")
             ],
           )),
-
-
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.blue,
-          child: Icon(Icons.add),
-          onPressed: () {
-            showModalBottomSheet(
-                backgroundColor: Colors.transparent,
-                context: context,
-                builder: (builder) {
-                  return Container(
-                    height: MediaQuery.of(context).size.height * 0.300,
-                    child: Container(
-                        decoration: new BoxDecoration(
-                            color: Colors.white70.withOpacity(1),
-                            borderRadius: new BorderRadius.only(
-                                topLeft: const Radius.circular(40.0),
-                                topRight: const Radius.circular(40.0))),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Text('Upload Files'),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Column(
-                                  children: [
-                                    Image.asset(
-                                      'images/camera.png',
-                                      height: 65,
-                                      width: 70,
-                                    ),
-                                    SizedBox(
-                                      height: 8,
-                                    ),
-                                    Text('Take a Photo')
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 30,
-                                ),
-
-                                /// ...import files
-                                GestureDetector(
-                                  onTap: () {},
-                                  child: Column(
-                                    children: [
-                                      Image.asset(
-                                        'images/import_files.png',
-                                        height: 65,
-                                        width: 70,
-                                      ),
-                                      SizedBox(
-                                        height: 8,
-                                      ),
-                                      Text('Import Files'),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 30,
-                                ),
-
-                                ///......Gallery...............................
-
-                                GestureDetector(
-                                  onTap: () {
-                                    getImageFromGallery();
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Image.asset(
-                                        'images/gallery.png',
-                                        height: 65,
-                                        width: 70,
-                                      ),
-                                      SizedBox(
-                                        height: 8,
-                                      ),
-                                      Text('Gallery')
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-
-                            // cross....
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
-                              child: Image.asset(
-                                'images/cancel.png',
-                                height: 65,
-                              ),
-                            )
-                          ],
-                        )),
-                  );
-                });
-          }),
+      // floatingActionButton: FloatingActionButton(
+      //     backgroundColor: Colors.blue,
+      //     child: Icon(Icons.add),
+      //     onPressed: () {
+      //       showModalBottomSheet(
+      //           backgroundColor: Colors.transparent,
+      //           context: context,
+      //           builder: (builder) {
+      //             return Container(
+      //               height: MediaQuery.of(context).size.height * 0.300,
+      //               child: Container(
+      //                   decoration: new BoxDecoration(
+      //                       color: Colors.white70.withOpacity(1),
+      //                       borderRadius: new BorderRadius.only(
+      //                           topLeft: const Radius.circular(40.0),
+      //                           topRight: const Radius.circular(40.0))),
+      //                   child: Column(
+      //                     crossAxisAlignment: CrossAxisAlignment.center,
+      //                     children: [
+      //                       SizedBox(
+      //                         height: 12,
+      //                       ),
+      //                       Text('Upload Files'),
+      //                       SizedBox(
+      //                         height: 16,
+      //                       ),
+      //                       Row(
+      //                         mainAxisAlignment: MainAxisAlignment.center,
+      //                         children: [
+      //                           Column(
+      //                             children: [
+      //                               Image.asset(
+      //                                 'images/camera.png',
+      //                                 height: 65,
+      //                                 width: 70,
+      //                               ),
+      //                               SizedBox(
+      //                                 height: 8,
+      //                               ),
+      //                               Text('Take a Photo')
+      //                             ],
+      //                           ),
+      //                           SizedBox(
+      //                             width: 30,
+      //                           ),
+      //
+      //                           /// ...import files
+      //                           GestureDetector(
+      //                             onTap: () {},
+      //                             child: Column(
+      //                               children: [
+      //                                 Image.asset(
+      //                                   'images/import_files.png',
+      //                                   height: 65,
+      //                                   width: 70,
+      //                                 ),
+      //                                 SizedBox(
+      //                                   height: 8,
+      //                                 ),
+      //                                 Text('Import Files'),
+      //                               ],
+      //                             ),
+      //                           ),
+      //                           SizedBox(
+      //                             width: 30,
+      //                           ),
+      //
+      //                           ///......Gallery...............................
+      //
+      //                           GestureDetector(
+      //                             onTap: () {
+      //                               getImageFromGallery();
+      //                             },
+      //                             child: Column(
+      //                               children: [
+      //                                 Image.asset(
+      //                                   'images/gallery.png',
+      //                                   height: 65,
+      //                                   width: 70,
+      //                                 ),
+      //                                 SizedBox(
+      //                                   height: 8,
+      //                                 ),
+      //                                 Text('Gallery')
+      //                               ],
+      //                             ),
+      //                           ),
+      //                         ],
+      //                       ),
+      //                       SizedBox(
+      //                         height: 12,
+      //                       ),
+      //
+      //                       // cross....
+      //                       GestureDetector(
+      //                         onTap: () {
+      //                           Navigator.pop(context);
+      //                         },
+      //                         child: Image.asset(
+      //                           'images/cancel.png',
+      //                           height: 65,
+      //                         ),
+      //                       )
+      //                     ],
+      //                   )),
+      //             );
+      //           });
+      //     }
+      //     ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
