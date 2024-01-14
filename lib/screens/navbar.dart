@@ -9,7 +9,6 @@ import 'home_screen.dart';
 import 'myfiles_screen.dart';
 
 class NavBar extends StatefulWidget {
-
   static const String routeName = '/navbar_route';
   const NavBar({super.key});
 
@@ -18,8 +17,6 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-
-
   var tabIndex = 0;
   void changeTabIndex(int index) {
     setState(() {
@@ -30,7 +27,6 @@ class _NavBarState extends State<NavBar> {
   final picker = ImagePicker();
   final pdf = pw.Document();
   List<File> _images = [];
-
 
   Future<void> getImageFromGallery() async {
     List<XFile>? pickedFiles = await picker.pickMultiImage();
@@ -97,13 +93,9 @@ class _NavBarState extends State<NavBar> {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
       body: IndexedStack(index: tabIndex, children: const [
         HomeScreen(),
         MyfileScreen(),
@@ -246,8 +238,6 @@ itemBar(IconData icon, String label) {
     icon: Icon(icon),
     label: label,
   );
-
-
 }
 
 
